@@ -2,9 +2,9 @@ FROM alpine:latest
 
 RUN \
 	mkdir -p /aws && \
-	apk -Uuv add groff less python py-pip && \
-	pip install awscli && \
-	apk --purge -v del py-pip && \
+	apk -Uuv add groff less python3 py3-pip && \
+	pip3 install awscli && \
+	apk --purge -v del py3-pip && \
 	rm /var/cache/apk/*
 
 WORKDIR /aws
